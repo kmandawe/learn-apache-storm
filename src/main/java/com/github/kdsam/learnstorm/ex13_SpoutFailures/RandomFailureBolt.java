@@ -13,7 +13,7 @@ import java.util.Random;
 
 public class RandomFailureBolt extends BaseRichBolt {
 
-    private static final Integer MAX_PERCENT_FAIL =  80;
+    private static final Integer MAX_PERCENT_FAIL =  50;
     Random random = new Random();
     private OutputCollector collector;
 
