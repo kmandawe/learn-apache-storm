@@ -21,7 +21,7 @@ public class TopologyMain {
 
         try {
             cluster.submitTopology("My-First-Topology", conf, builder.createTopology());
-            Thread.sleep(3000);
+            Thread.sleep(5000);
         } finally {
             cluster.shutdown();
         }
