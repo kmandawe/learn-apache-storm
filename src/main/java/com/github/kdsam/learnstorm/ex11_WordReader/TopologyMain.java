@@ -26,7 +26,7 @@ public class TopologyMain {
         LocalCluster cluster = new LocalCluster();
         try {
             cluster.submitTopology("WordCounter-Topology", conf, builder.createTopology());
-            Thread.sleep(10000);
+            Thread.sleep(30000);
         } finally {
             cluster.shutdown();
         }
