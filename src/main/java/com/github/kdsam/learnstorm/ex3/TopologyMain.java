@@ -1,7 +1,5 @@
 package com.github.kdsam.learnstorm.ex3;
 
-import com.github.kdsam.learnstorm.ex2.FileReaderSpout;
-import com.github.kdsam.learnstorm.ex2.SimpleBolt;
 import org.apache.storm.Config;
 import org.apache.storm.LocalCluster;
 import org.apache.storm.topology.TopologyBuilder;
@@ -20,7 +18,7 @@ public class TopologyMain {
         LocalCluster cluster = new LocalCluster();
         try {
             cluster.submitTopology("Read-Fields-Topology", conf, builder.createTopology());
-            Thread.sleep(3000);
+            Thread.sleep(5000);
         } finally {
             cluster.shutdown();
         }
