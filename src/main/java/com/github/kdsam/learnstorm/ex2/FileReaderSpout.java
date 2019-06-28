@@ -20,11 +20,11 @@ public class FileReaderSpout extends BaseRichSpout {
     private String str;
     private BufferedReader reader;
 
-    public void open(Map map, TopologyContext topologyContext, SpoutOutputCollector spoutOutputCollector) {
+    public void open(Map conf, TopologyContext topologyContext, SpoutOutputCollector spoutOutputCollector) {
         try {
-            this.fileReader = new FileReader(map.get("fileToRead").toString());
+            this.fileReader = new FileReader(conf.get("fileToRead").toString());
         } catch (FileNotFoundException e) {
-            throw new RuntimeException("Error reading file [" + map.get("wordFile") + "]");
+            throw new RuntimeException("Error reading file [" + conf.get("wordFile") + "]");
         }
 
         this.collector = spoutOutputCollector;
