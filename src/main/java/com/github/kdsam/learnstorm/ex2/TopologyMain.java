@@ -18,7 +18,7 @@ public class TopologyMain {
         LocalCluster cluster = new LocalCluster();
         try {
             cluster.submitTopology("File-Reader-Topology", conf, builder.createTopology());
-            Thread.sleep(3000);
+            Thread.sleep(5000);
         } finally {
             cluster.shutdown();
         }
